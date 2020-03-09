@@ -11,7 +11,7 @@ class App extends React.Component {
         { title : "ReactJS", isDone : true, priority : "medium"},
         { title : "Patterns", isDone : false, priority : "high"}
     ];
-    filterVal = "Completed";
+    filterVal = "Active";
     render = () => {
 
         return (
