@@ -8,6 +8,11 @@ class TodoListHeader extends React.Component {
         // this.newTasksTitleRef = React.createRef();
     }
 
+    state = {
+        error : false,
+        title : ""
+    }
+
     onAddTaskClick = () => {
         //let newText = this.newTasksTitileRef.current.value;
         //this.newTasksTitileRef.current.value = "";
@@ -32,18 +37,14 @@ class TodoListHeader extends React.Component {
         }
     }
 
-    state = {
-        error : false,
-        title : ""
-    }
-
     render = () => {
+        let classError = this.state.error ? "error" : "";
         return (
             <div className="todoList-header">
                 <h3 className="todoList-header__title">What to Learn</h3>
                 <div className="todoList-newTaskForm">
                     <input
-                        className={s.error}
+                        className={classError}
                         type="text"
                         placeholder="New task name"
                         // ref={this.newTasksTitleRef}
